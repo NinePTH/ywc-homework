@@ -1,12 +1,22 @@
 @import "tailwindcss";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+
+@font-face {
+  font-family: 'LINESeedSansTH';
+  src: url('/fonts/LINESeedSansTH_W_Th.woff2') format('woff2'),
+       url('/fonts/LINESeedSansTH_W_Th.woff') format('woff'),
+       url('/fonts/LINESeedSansTH_W_Th.eot') format('embedded-opentype');
 }
 
-html {
-  overflow-x: hidden;
-  width: 100%;
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }

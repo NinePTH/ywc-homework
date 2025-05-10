@@ -1,10 +1,11 @@
-import AllResultPage from "./pages/AllResultPage"
+import { BrowserRouter } from "react-router-dom"
+import AppRoute from "./routes/AppRoute"
 
 function App() {
   return (
-    <>
-      <AllResultPage />
-    </>
+    <BrowserRouter>
+      <AppRoute />
+    </BrowserRouter>
   )
 }
 
