@@ -3,11 +3,11 @@ import type { CandidateInformation } from "../types";
 import { candidateData } from "../data";
 
 const useSearchCandidates = () => {
-    const [candidates, setCandidates] = useState<CandidateInformation[] | null>([]);
+    const [candidates, setCandidates] = useState<CandidateInformation[] | null>(null);
 
     const handleSearchCandidates = (formData: CandidateInformation) => {
         if (formData.interviewRefNo === "" && formData.major === "" && formData.firstName === "" && formData.lastName === "") {
-            setCandidates(null);
+            setCandidates([]);
             return { candidates, handleSearchCandidates }
         }
         const allEntries = Object.values(candidateData).flat();

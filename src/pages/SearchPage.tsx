@@ -5,7 +5,7 @@ import useSearchCandidates from "../hooks/useSearchCandidate";
 
 const SearchPage: React.FC = () => {
   const { candidates, handleSearchCandidates } = useSearchCandidates();
-  const searchResults = candidates && candidates.length > 0 ? candidates : null
+  // const searchResults = candidates && candidates.length > 0 ? candidates : null
   console.log(candidates)
   return (
     <>
@@ -16,7 +16,7 @@ const SearchPage: React.FC = () => {
             ค้นหาผู้มีสิทธิ์สัมภาษณ์
           </span>
           <SearchForm handleSearch={handleSearchCandidates} />
-          <ResultLayout searchResults={searchResults} />
+          <ResultLayout searchResults={candidates} />
         </div>
       </div>
     </>
