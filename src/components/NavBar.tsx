@@ -44,6 +44,16 @@ const NavBar: React.FC = () => {
         </Link>
 
         <Link
+          to="/local"
+          className="hidden lg:block text-center"
+          onClick={() => {
+            animateScroll.scrollToTop();
+          }}
+        >
+          <p className="text-white text-lg">Local Data</p>
+        </Link>
+
+        <Link
           to="/sponsors"
           className="hidden lg:block text-center"
           onClick={() => {
@@ -72,6 +82,16 @@ const NavBar: React.FC = () => {
                 className="text-2xl lg:text-lg font-medium text-white active:text-gray-600"
               >
                 Search Candidates
+              </Link>
+              <Link
+                to="/local"
+                onClick={() => {
+                  animateScroll.scrollToTop();
+                  setIsExpand(false);
+                }}
+                className="text-2xl lg:text-lg font-medium text-white active:text-gray-600"
+              >
+                Local Data
               </Link>
               <Link
                 to="/sponsors"
