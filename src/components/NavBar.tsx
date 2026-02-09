@@ -33,25 +33,27 @@ const NavBar: React.FC = () => {
           </IconContext.Provider>
         </div>
 
-        <Link
-          to="/search"
-          className="hidden lg:block text-center"
-          onClick={() => {
-            animateScroll.scrollToTop();
-          }}
-        >
-          <p className="text-white text-lg">Search Candidates</p>
-        </Link>
+        <div className="hidden lg:flex gap-10 items-center">
+          <Link
+            to="/search"
+            className="hidden lg:block text-center"
+            onClick={() => {
+              animateScroll.scrollToTop();
+            }}
+          >
+            <p className="text-white text-lg">Search Candidates</p>
+          </Link>
 
-        <Link
-          to="/local"
-          className="hidden lg:block text-center"
-          onClick={() => {
-            animateScroll.scrollToTop();
-          }}
-        >
-          <p className="text-white text-lg">Local Data</p>
-        </Link>
+          <Link
+            to="/local"
+            className="hidden lg:block text-center"
+            onClick={() => {
+              animateScroll.scrollToTop();
+            }}
+          >
+            <p className="text-white text-lg">Local Data</p>
+          </Link>
+        </div>
 
         <Link
           to="/sponsors"
